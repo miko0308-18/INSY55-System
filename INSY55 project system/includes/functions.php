@@ -34,7 +34,7 @@ function redirect(string $path): void
     exit;
 }
 
-function e(?string $value): string
+function e(string|int|float|bool|null $value): string
 {
     return htmlspecialchars((string) $value, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
 }
