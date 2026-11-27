@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="520" viewBox="0 0 360 520" role="img" aria-label="Receipt Placeholder">
+  <rect x="20" y="20" width="320" height="480" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+  <text x="180" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#1f2937">Come N’ Meatshop</text>
+  <text x="180" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#6b7280">[Business Address Placeholder]</text>
+  <text x="180" y="108" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#6b7280">[Contact Number Placeholder]</text>
+  <line x1="45" y1="130" x2="315" y2="130" stroke="#d1d5db" stroke-dasharray="4 4"/>
+  <text x="45" y="160" font-family="Arial, sans-serif" font-size="12" fill="#374151">Receipt #: [Placeholder]</text>
+  <text x="45" y="182" font-family="Arial, sans-serif" font-size="12" fill="#374151">Date/Time: [Placeholder]</text>
+  <text x="45" y="204" font-family="Arial, sans-serif" font-size="12" fill="#374151">Cashier: [Placeholder]</text>
+  <line x1="45" y1="225" x2="315" y2="225" stroke="#d1d5db"/>
+  <text x="45" y="255" font-family="Arial, sans-serif" font-size="12" fill="#374151">Items / Qty / Price ...</text>
+  <text x="45" y="280" font-family="Arial, sans-serif" font-size="12" fill="#374151">Subtotal / Discount / VAT</text>
+  <text x="45" y="305" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#1f2937">TOTAL: ₱0.00</text>
+  <text x="45" y="330" font-family="Arial, sans-serif" font-size="12" fill="#374151">Payment: Cash / GCash</text>
+  <text x="45" y="352" font-family="Arial, sans-serif" font-size="12" fill="#374151">Amount Paid / Change</text>
+  <line x1="45" y1="380" x2="315" y2="380" stroke="#d1d5db" stroke-dasharray="4 4"/>
+  <text x="180" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#1f2937">Thank you for shopping at Come N’ Meatshop!</text>
+  <text x="180" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#9ca3af">[RECEIPT PLACEHOLDER - Replace/customize or remove later]</text>
+</svg>

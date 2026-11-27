@@ -1,0 +1,6 @@
+# Python dependencies for Come N' Meatshop utilities
+# MySQL connector for report scripts (connects to same DB as PHP)
+mysql-connector-python>=8.0.0
+
+# Optional but practical for Excel output (scripts fall back to CSV if unavailable)
+openpyxl>=3.1.0
