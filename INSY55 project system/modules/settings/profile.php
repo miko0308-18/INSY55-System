@@ -7,9 +7,20 @@ $pageTitle = page_title(__('Profile'));
 $userId = (int) current_user()['id'];
 $pdo = db();
 
+$user = [
+    'full_name' => '',
+    'email' => '',
+    'phone' => '',
+    'language_preference' => 'en',
+];
+
 $stmt = $pdo->prepare('SELECT * FROM users WHERE id = ? LIMIT 1');
 $stmt->execute([$userId]);
-$user = $stmt->fetch();
+$found = $stmt->fetch();
+
+if (is_array($found)) {
+    $user = array_merge($user, $found);
+}
 
 if (request_method() === 'POST') {
     require_csrf();
@@ -80,21 +91,20 @@ require __DIR__ . '/../../includes/header.php';
             <?= csrf_field() ?>
             <div class="mb-3">
                 <label class="form-label">Full name</label>
-                <input type="text" name="full_name" class="form-control" required value="<?= e($user['full_name']) ?>">
+                <input type="text" name="full_name" class="form-control" required value="<?= e((string) ($user['full_name'] ?? '')) ?>">
             </div>
             <div class="mb-3">
                 <label class="form-label">Email</label>
-                <input type="email" name="email" class="form-control" required value="<?= e($user['email']) ?>">
+                <input type="email" name="email" class="form-control" required value="<?= e((string) ($user['email'] ?? '')) ?>">
             </div>
             <div class="mb-3">
                 <label class="form-label">Phone</label>
-                <input type="text" name="phone" class="form-control" value="<?= e((string) $user['phone']) ?>">
-            </div>
+                <input type="text" name="phone" class="form-control" value="<?= e((string) ($user['phone'] ?? '')) ?>">
             <div class="mb-3">
                 <label class="form-label"><?= e(__('Language')) ?></label>
                 <select name="language_preference" class="form-select">
-                    <option value="en" <?= $user['language_preference'] === 'en' ? 'selected' : '' ?>><?= e(__('English')) ?></option>
-                    <option value="fil" <?= $user['language_preference'] === 'fil' ? 'selected' : '' ?>><?= e(__('Filipino')) ?></option>
+                    <option value="en" <?= ($user['language_preference'] ?? 'en') === 'en' ? 'selected' : '' ?>><?= e(__('English')) ?></option>
+                    <option value="fil" <?= ($user['language_preference'] ?? 'en') === 'fil' ? 'selected' : '' ?>><?= e(__('Filipino')) ?></option>
                 </select>
             </div>
             <div class="row">
