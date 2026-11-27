@@ -109,7 +109,7 @@ require __DIR__ . '/../../includes/header.php';
             <div class="row g-3">
                 <div class="col-md-6">
                     <label class="form-label">Full name</label>
-                    <input type="text" name="full_name" class="form-control" required value="<?= e($user['full_name']) ?>">
+                    <input type="text" name="full_name" class="form-control" required value="<?= e((string) ($user['full_name'] ?? '')) ?>">
                 </div>
                 <div class="col-md-6">
                     <label class="form-label">Username</label>
@@ -117,11 +117,11 @@ require __DIR__ . '/../../includes/header.php';
                 </div>
                 <div class="col-md-6">
                     <label class="form-label">Email</label>
-                    <input type="email" name="email" class="form-control" required value="<?= e($user['email']) ?>">
+                    <input type="email" name="email" class="form-control" required value="<?= e((string) ($user['email'] ?? '')) ?>">
                 </div>
                 <div class="col-md-6">
                     <label class="form-label">Phone</label>
-                    <input type="text" name="phone" class="form-control" value="<?= e((string) $user['phone']) ?>">
+                    <input type="text" name="phone" class="form-control" value="<?= e((string) ($user['phone'] ?? '')) ?>">
                 </div>
                 <div class="col-md-6">
                     <label class="form-label">Password <?= $isEdit ? '(optional)' : '' ?></label>
