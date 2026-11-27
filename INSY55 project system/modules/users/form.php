@@ -138,7 +138,7 @@ require __DIR__ . '/../../includes/header.php';
                     <label class="form-label"><?= e(__('Status')) ?></label>
                     <select name="status" class="form-select">
                         <?php foreach (['Active','Inactive','Archived'] as $s): ?>
-                            <option value="<?= $s ?>" <?= $user['status'] === $s ? 'selected' : '' ?>><?= $s ?></option>
+                            <option value="<?= e($s) ?>" <?= ($user['status'] ?? 'Active') === $s ? 'selected' : '' ?>><?= e($s) ?></option>
                         <?php endforeach; ?>
                     </select>
                 </div>
